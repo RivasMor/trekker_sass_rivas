@@ -1,0 +1,32 @@
+
+/*Grid Index*/
+.container {
+   
+    width: 80%;
+    height: 320vh; 
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 5% 85% 10%;  
+    grid-template-areas: "header header header navBar navBar navBar"
+                        "main main main main main main"
+                        "footer footer footer footer footer footer";   
+}
+/*Grid*/
+.header{
+    grid-area: header;    
+    
+}
+.navBar{
+    grid-area:navBar;
+}
+.main{
+    grid-area:main;
+    
+    
+}
+
+.footer{
+    grid-area: footer;
+    
+}
