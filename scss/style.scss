@@ -3,6 +3,12 @@
 @import "grid";
 
 
+/*coment*/
+
+@mixin ancho ($medida) {
+    width: $medida;
+}
+
 
 
 
@@ -48,19 +54,16 @@
     height: 90vh;
     background-image: url("../img/imgCoverBackground.jpg");
     background-size: cover;
-
-
 }
 
 /*Sections*/
 .titleSection {
-    text-align: center;
     padding: 2rem 2rem;
 }
 
 
 .cards {
-    width: 100%;
+    @include ancho(100%);
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -87,10 +90,9 @@
         }
 
         .titleCard {
-            text-align: center;
+
             padding: 1rem 1rem;
         }
-
         .buttonCard {
             width: 30%;
             height: 6vh;
@@ -110,24 +112,16 @@
                 background-position: 0 -85px;
             }
         }
-
-
     }
 }
 
 .buttonCard--modifier {
+    @extend .buttonCard;
     width: 15%;
     height: 7vh;
     margin-left: 76%;
     font-size: 15px;
     margin-top: 1rem;
-    background-color: #eec0c6;
-    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
-    transition: all .3s;
-    color: white;
-    border-radius: 5px;
-    border-style: none;
-
     &:hover {
         transition: all .3s;
         background-color: #7f5a83;
@@ -138,17 +132,14 @@
 
 //Section Comments//
 .titleSectionComments {
-    text-align: center;
     margin-top: 10vh;
-
 }
 
 .comments {
+    @include ancho(100%);
     margin-top: 2rem;
-    width: 100%;
     display: flex;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
     border-radius: 5px;
     color: gray;
 
@@ -163,8 +154,6 @@
             padding-top: 15vh;
         }
     }
-
-
 }
 
 .footer {
@@ -180,32 +169,44 @@
 }
 
 .navBarListFooter {
-    a{    
-    
+    a {
         text-decoration: none;
-        color:black;
-        font-size: 13px;   
-        
+        color: black;
+        font-size: 13px;
     }
+
     .navBarItemFooter {
         list-style-type: none;
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
         }
 
     }
 }
-.listSocialMedia{
-    a{
-        list-style-type:none;
+
+.listSocialMedia {
+    a {
+        list-style-type: none;
         text-decoration: none;
         color: black;
     }
-    .socialMediaItem{
+
+    .socialMediaItem {
         list-style-type: none;
-     
-        &:hover{
+
+        &:hover {
             text-decoration: underline;
         }
+    }
+}
+//each
+@each $var in titleSection,
+titleSectionComments,
+titleCard,
+comments,
+divCards {
+    .#{$var} {
+        text-align: center;
     }
 }

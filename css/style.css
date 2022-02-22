@@ -28,6 +28,7 @@
 .footer {
   grid-area: footer; }
 
+/*coment*/
 #siteLogo {
   width: 8%;
   height: auto;
@@ -61,7 +62,6 @@
 
 /*Sections*/
 .titleSection {
-  text-align: center;
   padding: 2rem 2rem; }
 
 .cards {
@@ -85,9 +85,8 @@
       padding: 1rem;
       font-size: 14px; }
     .cards .divCards .titleCard {
-      text-align: center;
       padding: 1rem 1rem; }
-    .cards .divCards .buttonCard {
+    .cards .divCards .buttonCard, .cards .divCards .buttonCard--modifier {
       width: 30%;
       height: 6vh;
       margin-left: 34%;
@@ -98,7 +97,7 @@
       color: white;
       border-radius: 5px;
       border-style: none; }
-      .cards .divCards .buttonCard:hover {
+      .cards .divCards .buttonCard:hover, .cards .divCards .buttonCard--modifier:hover {
         transition: all .3s;
         background-color: #7f5a83;
         background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
@@ -109,13 +108,7 @@
   height: 7vh;
   margin-left: 76%;
   font-size: 15px;
-  margin-top: 1rem;
-  background-color: #eec0c6;
-  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
-  transition: all .3s;
-  color: white;
-  border-radius: 5px;
-  border-style: none; }
+  margin-top: 1rem; }
   .buttonCard--modifier:hover {
     transition: all .3s;
     background-color: #7f5a83;
@@ -123,15 +116,13 @@
     background-position: 0 -85px; }
 
 .titleSectionComments {
-  text-align: center;
   margin-top: 10vh; }
 
 .comments {
-  margin-top: 2rem;
   width: 100%;
+  margin-top: 2rem;
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
   border-radius: 5px;
   color: gray; }
   .comments .divCards {
@@ -172,3 +163,18 @@
   list-style-type: none; }
   .listSocialMedia .socialMediaItem:hover {
     text-decoration: underline; }
+
+.titleSection {
+  text-align: center; }
+
+.titleSectionComments {
+  text-align: center; }
+
+.titleCard {
+  text-align: center; }
+
+.comments {
+  text-align: center; }
+
+.divCards {
+  text-align: center; }
