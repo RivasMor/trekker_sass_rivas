@@ -1,0 +1,8 @@
+En mi archivo index.html agregue el SEO con las siguientes caracteristicas:
+*Titulo: Agregue la marca del sitio, sumado a "inicio" para localizar la pagina en donde estas situado.
+*Descripcion: Agregue el siguiente parrafo que resume en pocas palabras el contenido del sitio:   
+<meta name="description" content="Para hacer Trekking no necesitas ser un experto. Necesitas buena actitud, algunos consejos, y elegir un buen lugar.
+  Trekker puede ayudarte a encontrar tu proximo desafío">
+  *Palabras claves: A traves de la etiqueta meta name "keywords" agregue algunas palabras claves muy relacionadas al contenido 
+  del sitio . A continuacion las describo:
+  <meta name="keywords" content="turismo,senderismo,montaña,trekking,hiking,caminata">
